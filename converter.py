@@ -6,25 +6,27 @@ def insertIntoExists(section):
 
 def getTitles(section):
     i = 0 
-    temp = []
+    temp = ""
     while section[i][0] == '`':
         #get section of row in between ` ` to get titles
-        temp.append(section[i][1:str(section[i][1:]).find('`')+1] + ',')
+        temp += section[i][1:str(section[i][1:]).find('`')+1] + ','
         i += 1
     return temp
 
 def getData(section):
-	output = []
-    for line in section:
-    	if line.startswith("INSERTINTO"):
-      		substr = line
-            while len(substr) != 1:
-            	output.append(substr[substr.find('(')+1:substr.find(')')])
+	output = ""
+	for line in section:
+		if line.startswith("INSERTINTO"):
+			startRow = line.find('(')
+			substr = line[startRow+1:]
+			while startRow != -1:
+				output += substr[:substr.find(')')]
+				startRow = substr.find('(')
+				substr = substr[startRow+1:]
 	return output
 #creating a new csv file from the table names 
 def createCsvFile(fileName):
     return open(fileName+'.csv','w')
-
 
 #main open
 sqlFile = open('demo.sql', 'r')
@@ -37,9 +39,9 @@ tables = content.split("CREATE TABLE") #spliting the content of the file by the 
 
 filtered2 = list(filter(insertIntoExists, tables))[1].replace(" ", "").split('\n') #removes unnecesry tables without conetnt 
 titles=getTitles(filtered2) #the name is located in the first tile and the table titles in the rest
-table = titles[1:] + '\n' + getData(filtered2)
+table = titles[1:] + os.linesep + getData(filtered2)
 
 csvForTest=createCsvFile(titles[0])
 csvForTest.write(table)
 #main close
-csvFortest.close()
+csvForTest.close()
