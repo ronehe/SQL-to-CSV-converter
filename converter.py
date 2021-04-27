@@ -1,6 +1,7 @@
 import os
 import sys
 import csv
+
 def insertIntoExists(section):
     return section.find("INSERT INTO") != -1
 
