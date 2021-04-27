@@ -1,3 +1,4 @@
+# This isa  comment
 def insertIntoExists(section):
 	return section.find("INSERT INTO") != -1
 
