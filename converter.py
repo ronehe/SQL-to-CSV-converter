@@ -1,4 +1,5 @@
 #creators -----Ronen heifetz 316481423 , Markovich Leon 318375060-----
+#please make sure to create a folder named "csvFiles" in the same directory before running !!!!!!!!!!!!!
 
 #finding full tables for which be counted in the excel
 def insertIntoExists(section):

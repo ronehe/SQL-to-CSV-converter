@@ -1,7 +1,15 @@
-# SQL-to-CSV-converter
+# sql to excel converter
+**written by Ronen Heifetz 316481423 && Leon Markovich 318375060**
 
-in process project
+script project, creating folder with csv files containg tables for excel  from sql file.
 
-##TODO
--making sure titles and contents are printed right
--Generalize to multiple tables
+**NOTE**: please make sure to create a folder named "csvFiles" in the same directory before running !!!!!!!!!!!!!
+
+# Data Structures:
+
+sql file,csv files
+
+# Noteworthy algorithms
+None
+# Known Bugs
+None
