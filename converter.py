@@ -18,12 +18,9 @@ def getData(section):
 	output = ""
 	for line in section:
 		if line.startswith("INSERTINTO"):
-			startRow = line.find('(')
-			substr = line[startRow+1:]
-			while startRow != -1:
-				output += substr[:substr.find(')')]
-				startRow = substr.find('(')
-				substr = substr[startRow+1:]
+            output=line.split('(')
+            output=output[1:]
+            output=[x[-2:] for x in output]    
 	return output
 #creating a new csv file from the table names 
 def createCsvFile(fileName):
