@@ -18,9 +18,9 @@ def getData(section):
 	output = ""
 	for line in section:
 		if line.startswith("INSERTINTO"):
-            output=line.split('(')
-            output=output[1:]
-            output=[x[-2:] for x in output]    
+			output=line.split('(')
+			output=output[1:]
+			output=[x[-2:] for x in output]    
 	return output
 #creating a new csv file from the table names 
 def createCsvFile(fileName):
