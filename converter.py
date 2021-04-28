@@ -16,12 +16,12 @@ def getTitles(section):
     return temp
 
 def getData(section):
-	output = ""
+	output =[]
 	for line in section:
 		if line.startswith("INSERTINTO"):
 			output=line.split('(')
 			output=output[1:]
-			output=[x[-2:] for x in output]    
+			output=[x[:-2] for x in output]    
 	return output
 #creating a new csv file from the table names 
 def createCsvFile(fileName):
@@ -41,6 +41,7 @@ titles=getTitles(filtered2) #the name is located in the first tile and the table
 table = titles[1:]
 
 csvForTest=createCsvFile(str(titles[0])[:-1])
-csvForTest.write(','.join(([x[:-1] for x in table]))) # sepeating the list of titles without ' 
+
+csvForTest.write(','.join(([x[:-1] for x in table]))+'\n\n'+('\n\n'.join(getData(filtered2)))) # sepeating the list of titles without ' 
 #main close
 csvForTest.close()
