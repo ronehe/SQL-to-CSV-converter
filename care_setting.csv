@@ -1,5 +1,0 @@
-care_setting_id,name,description,care_setting_type,creator,date_created,retired,retired_by,date_retired,retire_reason,changed_by,date_changed,uuid
-
-1,'Outpatient','Out-patientcaresetting','OUTPATIENT',1,'2013-12-2700:00:00',0,NULL,NULL,NULL,NULL,NULL,'6f0c9a92-6f24-11e3-af88-005056821db0'
-
-2,'Inpatient','In-patientcaresetting','INPATIENT',1,'2013-12-2700:00:00',0,NULL,NULL,NULL,NULL,NULL,'c365e560-c3ec-11e3-9c1a-0800200c9a66'

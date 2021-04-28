@@ -25,7 +25,8 @@ def getData(section):
 	return output
 #creating a new csv file from the table names 
 def createCsvFile(fileName):
-    return open(fileName+'.csv','w')
+    folder='csvFiles\\'
+    return open(folder +fileName+'.csv','w')
 
 #main open
 sqlFile = open('demo.sql', 'r')
@@ -36,12 +37,12 @@ csvFile = open('csvfile.txt', 'w')
 sqlFile.close()
 tables = content.split("CREATE TABLE") #spliting the content of the file by the tables with or without their values
 
-filtered2 = list(filter(insertIntoExists, tables))[1].replace(" ", "").split('\n') #removes unnecesry tables without conetnt 
-titles=getTitles(filtered2) #the name is located in the first tile and the table titles in the rest
-table = titles[1:]
-
-csvForTest=createCsvFile(str(titles[0])[:-1])
-
-csvForTest.write(','.join(([x[:-1] for x in table]))+'\n\n'+('\n\n'.join(getData(filtered2)))) # sepeating the list of titles without ' 
+filtered2 = list(filter(insertIntoExists, tables))
+for i in filtered2:
+    i.replace(" ", "").split('\n') #removes unnecesry tables without conetnt 
+    titles=getTitles(i) #the name is located in the first tile and the table titles in the rest
+    table = titles[1:]
+    outputFile=createCsvFile(str(titles[0])[:-1])
+    outputFile.write(','.join(([x[:-1] for x in table]))+'\n\n'+('\n\n'.join(getData(i)))) # sepeating the list of titles without ' 
+    outputFile.close()
 #main close
-csvForTest.close()
