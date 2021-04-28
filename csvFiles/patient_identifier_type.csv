@@ -1,7 +1,0 @@
-patient_identifier_type_id,name,description,format,check_digit,creator,date_created,required,format_description,validator,retired,retired_by,date_retired,retire_reason,uuid,location_behavior,uniqueness_behavior
-
-1,'OpenMRSIdentificationNumber','UniquenumberusedinOpenMRS','',1,1,'2005-09-2200:00:00',0,NULL,'org.openmrs.patient.impl.LuhnIdentifierValidator',0,NULL,NULL,NULL,'8d793bee-c2cc-11de-8d13-0010c6dffd0f',NULL,NULL
-
-2,'OldIdentificationNumber','NumbergivenoutpriortotheOpenMRSsyst
-
-Nocheckdigit)','',0,1,'2005-09-2200:00:00',0,NULL,NULL,0,NULL,NULL,NULL,'8d79403a-c2cc-11de-8d13-0010c6dffd0f',NULL,NULL

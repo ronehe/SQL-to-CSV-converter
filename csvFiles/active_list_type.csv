@@ -1,5 +1,0 @@
-active_list_type_id,name,description,creator,date_created,retired,retired_by,date_retired,retire_reason,uuid
-
-1,'Allergy','AnAllergythePatientmayhave',1,'2010-05-2800:00:00',0,NULL,NULL,NULL,'96f4f603-6a99-11df-a648-37a07f9c90fb'
-
-2,'Problem','AProblemthePatientmayhave',1,'2010-05-2800:00:00',0,NULL,NULL,NULL,'a0c7422b-6a99-11df-a648-37a07f9c90fb'

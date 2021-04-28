@@ -1,5 +1,0 @@
-user_id,system_id,username,password,salt,secret_question,secret_answer,creator,date_created,changed_by,date_changed,person_id,retired,retired_by,date_retired,retire_reason,uuid
-
-1,'admin',NULL,'94153782639710ebf5279d7630bec42a297c3f696af8123a69be10794fc52ee72186d5de504cdd01c05cb8c421312c267b7a9411c3e80f7d0dcc0f41d6911fa9','0995e2c9a7e38a2de4d8be8c3528fa8e0b6ede2e07a61f143672d4bbd6b7ab4c36bc4694d25ec70f65827afee654b0d64bd72959bea7be0169247c18aa7ff00c',NULL,NULL,1,'2005-01-0100:00:00',1,'2014-11-2421:56:35',1,0,NULL,NULL,NULL,'842f4bae-1692-11df-97a5-7038c432aabf'
-
-2,'daemon','daemon',NULL,NULL,NULL,NULL,1,'2010-04-2613:25:00',NULL,NULL,9347,0,NULL,NULL,NULL,'A4F30A1B-5EB9-11DF-A648-37A07F9C90FB'
