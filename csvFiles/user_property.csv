@@ -1,0 +1,15 @@
+user_id,property,property_value
+
+1,'defaultLocale','en_GB'
+
+1,'defaultLocation',''
+
+1,'loginAttempts','0'
+
+1,'notification',''
+
+1,'notificationAddress',''
+
+1,'showRetired','true'
+
+1,'showVerbose','true'
