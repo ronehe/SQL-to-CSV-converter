@@ -7,11 +7,12 @@ def insertIntoExists(section):
 
 def getTitles(section):
     i = 0 
-    temp = ""
+    temp = []
     while section[i][0] == '`':
         #get section of row in between ` ` to get titles
-        temp += section[i][1:str(section[i][1:]).find('`')+1] + ','
+        temp.append(section[i][1:str(section[i][1:]).find('`')+1] + ',')
         i += 1
+    
     return temp
 
 def getData(section):
@@ -37,9 +38,9 @@ tables = content.split("CREATE TABLE") #spliting the content of the file by the 
 
 filtered2 = list(filter(insertIntoExists, tables))[1].replace(" ", "").split('\n') #removes unnecesry tables without conetnt 
 titles=getTitles(filtered2) #the name is located in the first tile and the table titles in the rest
-table = titles[1:] + os.linesep + getData(filtered2)
+table = titles[1:]
 
-csvForTest=createCsvFile(titles[0])
-csvForTest.write(table)
+csvForTest=createCsvFile(str(titles[0])[:-1])
+csvForTest.write(','.join(([x[:-1] for x in table]))) # sepeating the list of titles without ' 
 #main close
 csvForTest.close()
