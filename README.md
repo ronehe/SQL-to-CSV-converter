@@ -1,5 +1,5 @@
 # sql to excel converter
-**written by Ronen Heifetz 316481423 && Leon Markovich 318375060**
+**written by Ronen Heifetz  && Leon Markovich **
 
 script project, creating folder with csv files containg tables for excel  from sql file.
 
