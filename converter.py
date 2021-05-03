@@ -1,3 +1,4 @@
+import os
 #creators -----Ronen heifetz  , Markovich Leon -----
 #please make sure to create a folder named "csvFiles" in the same directory before running !!!!!!!!!!!!!
 
@@ -26,11 +27,12 @@ def getData(section):
 	return output
 #creating a new csv file from the table names 
 def createCsvFile(fileName):
-    return open('csvFiles\\' +fileName+'.csv','w')
+	path = 'csvFiles/' + fileName + '.csv'
+	return open(path,'w')
 
 #main open
+os.mkdir('csvFiles')
 sqlFile = open('demo.sql', 'r')
-csvFile = open('csvfile.txt', 'w')
 content = sqlFile.read()
 sqlFile.close() #closing the sql file not needed after making it a string
 tables = content.split("CREATE TABLE") #spliting the content of the file by the tables with or without their values

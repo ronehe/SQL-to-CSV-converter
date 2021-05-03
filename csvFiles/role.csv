@@ -1,0 +1,9 @@
+role,description,uuid
+
+'Anonymous','Privilegesfornon-authenticatedusers.','774b2af3-6437-4e5a-a310-547554c7c65c'
+
+'Authenticated','CoreRole','f7fd42ef-880e-40c5-972d-e4ae7c990de2'
+
+'Provider','Providersinthesystem','8d94f280-c2cc-11de-8d13-0010c6dffd0f'
+
+'SystemDeveloper','AssignedtoAdministratorsofOpenMRS.Givesadditionalaccesstochangecoreaspectsofthesystem.','b3a01b5e-fbff-11df-b97d-005056a916f7'

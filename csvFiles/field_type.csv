@@ -1,0 +1,11 @@
+field_type_id,name,description,is_set,creator,date_created,uuid
+
+1,'Concept','',0,1,'2005-02-2212:43:00','8d5e7d7c-c2cc-11de-8d13-0010c6dffd0f'
+
+2,'Databaseelement','',0,1,'2005-02-2212:43:00','8d5e8196-c2cc-11de-8d13-0010c6dffd0f'
+
+3,'SetofConcepts','',1,1,'2005-02-2212:43:00','8d5e836c-c2cc-11de-8d13-0010c6dffd0f'
+
+4,'MiscellaneousSet','',1,1,'2005-02-2212:43:00','8d5e852e-c2cc-11de-8d13-0010c6dffd0f'
+
+5,'Section','',1,1,'2005-02-2212:43:00','8d5e86fa-c2cc-11de-8d13-0010c6dffd0f'
