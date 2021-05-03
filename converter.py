@@ -1,6 +1,5 @@
 import os
 #creators -----Ronen heifetz  , Markovich Leon -----
-#please make sure to create a folder named "csvFiles" in the same directory before running !!!!!!!!!!!!!
 
 #finding full tables for which be counted in the excel
 def insertIntoExists(section):
@@ -31,7 +30,7 @@ def createCsvFile(fileName):
 	return open(path,'w')
 
 #main open
-os.mkdir('csvFiles')
+os.mkdir('csvFiles') #creates a folder for all the files
 sqlFile = open('demo.sql', 'r')
 content = sqlFile.read()
 sqlFile.close() #closing the sql file not needed after making it a string
@@ -40,8 +39,8 @@ tables = content.split("CREATE TABLE") #spliting the content of the file by the 
 filtered2 = list(filter(insertIntoExists, tables))
 for i in filtered2:
     tablesWithoutSpaces=i.replace(" ", "").split('\n') #removes unnecesry tables without conetnt 
-    titles=getTitles(tablesWithoutSpaces) #the name is located in the first tile and the table titles in the rest
-    table = titles[1:] #the name of the table is in tile 0 and the rest of it is its titles
+    titles=getTitles(tablesWithoutSpaces) #the name is located in the first tile and the table 
+    table = titles[1:] # the rest of the titles
     outputFile=createCsvFile(str(titles[0])[:-1])
     outputFile.write(','.join(([x[:-1] for x in table]))+'\n\n'+('\n\n'.join(getData(tablesWithoutSpaces)))) # sepeating the list of titles without ' 
     outputFile.close() #closing each opened file
