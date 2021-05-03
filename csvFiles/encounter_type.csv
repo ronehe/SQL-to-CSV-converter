@@ -1,9 +1,0 @@
-encounter_type_id,name,description,creator,date_created,retired,retired_by,date_retired,retire_reason,uuid,view_privilege,edit_privilege
-
-1,'ADULTINITIAL','OutpatientAdultInitialVisit',1,'2005-02-2400:00:00',0,NULL,NULL,NULL,'8d5b27bc-c2cc-11de-8d13-0010c6dffd0f',NULL,NULL
-
-2,'ADULTRETURN','OutpatientAdultReturnVisit',1,'2005-02-2400:00:00',0,NULL,NULL,NULL,'8d5b2be0-c2cc-11de-8d13-0010c6dffd0f',NULL,NULL
-
-3,'PEDSINITIAL','OutpatientPediatricInitialVisit',1,'2005-02-2400:00:00',0,NULL,NULL,NULL,'8d5b2dde-c2cc-11de-8d13-0010c6dffd0f',NULL,NULL
-
-4,'PEDSRETURN','OutpatientPediatricReturnVisit',1,'2005-02-2400:00:00',0,NULL,NULL,NULL,'8d5b3108-c2cc-11de-8d13-0010c6dffd0f',NULL,NULL
